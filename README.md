@@ -55,4 +55,4 @@ Debian Wheezy and Debian Jessie
 
 #### Tested
 
-Samba 3.6.6 and 4.1.17 (not work with Samba 4.2.10)
+Samba 3.6.6, 4.1.17, 4.7.6 (not work with Samba 4.2.10)
