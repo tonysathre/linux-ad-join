@@ -119,6 +119,7 @@ readonly SSSD_USE_FQDN_NAMES=0
 
 readonly PAM_SESSIONS_CONFIG_FILE="/etc/pam.d/common-session"
 readonly PAM_MKHOMEDIR_CONFIG_FILE="/usr/share/pam-configs/mkhomedir"
+readonly PAM_ACCOUNT_CONFIG_FILE="/etc/pam.d/common-account"
 
 readonly SUDO_CONFIG_DIR="/etc/sudoers.d"
 readonly SUDO_SERVICE_NAME="sudo"
@@ -2247,7 +2248,7 @@ configure_pam()
     debug "Configure PAM."
 
     write_to_file "$(print_pam_mkhomedir_config)" "${PAM_MKHOMEDIR_CONFIG_FILE}" || return 1
-
+    echo "session    required   pam_mkhomedir.so skel=/etc/skel/ umask=0022" >> $PAM_ACCOUNT_CONFIG_FILE
     "${PAM_AUTH_UPDATE_PATH}" --force --package || return 1
 
     debug "PAM configured successfully."
