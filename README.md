@@ -48,10 +48,6 @@ Debian 9 (stretch)
 
 ---
 
-## join-ad-winbind.sh (obsolete)
-
-Joins machine to the domain using Samba and Winbind.
-
 #### Supported Linux
 
 Debian Wheezy and Debian Jessie
