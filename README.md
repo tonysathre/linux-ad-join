@@ -1,6 +1,6 @@
 # Join Debian to Active Directory
 
-Bash scripts for interactive joining Debain machines to the Active Directory.
+Bash scripts for interactive joining Debain-based machines to Active Directory.
 
 ## join-ad-sssd.sh
 
@@ -43,6 +43,7 @@ Options:
 
 #### Supported and tested Linux
 
+Ubuntu 18.04
 Debian 8 (jessie)
 Debian 9 (stretch)
 
