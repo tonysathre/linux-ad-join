@@ -2413,7 +2413,7 @@ configure_sudo_permissions()
     chown "root:root" "${sudo_config_file}" || return 1
     chmod '0440' "${sudo_config_file}" || return 1
 
-    stop_service "${SUDO_SERVICE_NAME}" && start_service "${SUDO_SERVICE_NAME}" || return 1
+    #stop_service "${SUDO_SERVICE_NAME}" && start_service "${SUDO_SERVICE_NAME}" || return 1
 
     debug "Sudo permissions configured successfully."
 
